@@ -4,19 +4,12 @@
 
 \documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
 
-
-\usepackage{tikz}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-		\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
-
 \input{latexGoodPractices/preamble.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setlength{\parskip}{0pt}
 
-\addbibresource{references.bib}
 
 % Philippe's nuclear buttons to squeeze more text in the paper, use with care!
 %\linepenalty=3000  % Works well
@@ -44,15 +37,13 @@
 % on the last page of the document
 
 \title{\LARGE \bf
-	% Instance segmentation of wood logs for automation of log grasping in forestry operations
-	Instance Segmentation for Autonomous Log Grasping in Forestry Operations
+	Doughnut Calib
 }
-\author{Jean-Michel Fortin$^{1}$, Olivier Gamache$^{1}$, Vincent Grondin$^{1}$, François Pomerleau$^{1}$, Philippe Gigu�?re$^{1}$ %\\
+\author{Dominic Baril$^{1}$, Philippe Gigu�?re$^{1}$, François Pomerleau$^{1}$  %\\
 	%Northern Robotics Laboratory, Université Laval, Québec, Québec, Canada \\
 	\thanks{$^{1}$ The authors are with Northern Robotics Laboratory, Université Laval, Québec City, Canada,
-		{\tt{\small{$\{$jean-michel.fortin, olivier.gamache, vincent.grondin, francois.pomerleau$\}$ @norlab.ulaval.ca,} philippe.giguere@ift.ulaval.ca}}}%
-	\thanks{* This research was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) through the grant CRD 538321-18, in collaboration with FP Innovations and Resolute Forest Products.}%
-	\thanks{** The code and dataset for this paper are available here : \url{https://github.com/norlab-ulaval/logpiles_segmentation}}%
+		{\tt{\small{$\{$dominic.baril, francois.pomerleau$\}$ @norlab.ulaval.ca,} philippe.giguere@ift.ulaval.ca}}}%
+	\thanks{* This research was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) through the grant }%
 }
 
 \begin{document}
