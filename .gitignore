@@ -1,0 +1,6 @@
+*.aux
+*.log
+*.out
+*.xml
+*.gz
+root-blx.bib
