@@ -1,41 +1,256 @@
-@article{swin,
-  author    = {Ze Liu and
-               Yutong Lin and
-               Yue Cao and
-               Han Hu and
-               Yixuan Wei and
-               Zheng Zhang and
-               Stephen Lin and
-               Baining Guo},
-  title     = {Swin Transformer: Hierarchical Vision Transformer using Shifted Windows},
-  journal   = {CoRR},
-  volume    = {abs/2103.14030},
-  year      = {2021},
-  url       = {https://arxiv.org/abs/2103.14030},
-  eprinttype = {arXiv},
-  eprint    = {2103.14030},
-  timestamp = {Thu, 08 Apr 2021 07:53:26 +0200},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2103-14030.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+%%============ Related work ======================
+
+% kinematic
+
+@inproceedings{Anousaki2004,
+	author = {Anousaki, Georgia and Kyriakopoulos, K.J.},
+	booktitle = {IEEE International Conference on Robotics and Automation, 2004. Proceedings. ICRA '04. 2004},
+	doi = {10.1109/ROBOT.2004.1307211},
+	file = {::},
+	isbn = {0-7803-8232-3},
+	number = {April},
+	pages = {580--585 Vol.1},
+	publisher = {IEEE},
+	title = {{A dead-reckoning scheme for skid-steered vehicles in outdoor environments}},
+	url = {http://ieeexplore.ieee.org/document/1307211/},
+	year = {2004}
 }
 
-@article{attention,
-  author    = {Ashish Vaswani and
-               Noam Shazeer and
-               Niki Parmar and
-               Jakob Uszkoreit and
-               Llion Jones and
-               Aidan N. Gomez and
-               Lukasz Kaiser and
-               Illia Polosukhin},
-  title     = {Attention Is All You Need},
-  journal   = {CoRR},
-  volume    = {abs/1706.03762},
-  year      = {2017},
-  url       = {http://arxiv.org/abs/1706.03762},
-  eprinttype = {arXiv},
-  eprint    = {1706.03762},
-  timestamp = {Sat, 23 Jan 2021 01:20:40 +0100},
-  biburl    = {https://dblp.org/rec/journals/corr/VaswaniSPUJGKP17.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{Mandow2007,
+	author = {Mandow, Anthony and Martinez, Jorge L. and Morales, Jesus and Blanco, Jose L. and Garcia-Cerezo, Alfonso and Gonzalez, Javier},
+	booktitle = {2007 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+	doi = {10.1109/IROS.2007.4399139},
+	isbn = {978-1-4244-0911-2},
+	month = {oct},
+	pages = {1222--1227},
+	publisher = {IEEE},
+	title = {{Experimental kinematics for wheeled skid-steer mobile robots}},
+	url = {http://ieeexplore.ieee.org/document/4399139/},
+	year = {2007}
 }
+
+@article{Wang2015,
+	author = {Wang, Tianmiao and Wu, Yao and Liang, Jianhong and Han, Chenhao and Chen, Jiao and Zhao, Qiteng},
+	doi = {10.3390/s150509681},
+	issn = {1424-8220},
+	journal = {Sensors},
+	keywords = {Dynamic model,Experimental kinematics,Instantaneous centers of rotation,Laser scanner,Mobile robot,Skid-steering},
+	month = {apr},
+	number = {5},
+	pages = {9681--9702},
+	title = {{Analysis and Experimental Kinematics of a Skid-Steering Wheeled Robot Based on a Laser Scanner Sensor}},
+	url = {http://www.mdpi.com/1424-8220/15/5/9681},
+	volume = {15},
+	year = {2015}
+}
+
+@inproceedings{Baril2020,
+	archivePrefix = {arXiv},
+	arxivId = {2004.05131},
+	author = {Baril, Dominic and Grondin, Vincent and Deschenes, Simon-Pierre and Laconte, Johann and Vaidis, Maxime and Kubelka, Vladimir and Gallant, Andre and Giguere, Philippe and Pomerleau, Francois},
+	booktitle = {2020 17th Conference on Computer and Robot Vision (CRV)},
+	doi = {10.1109/CRV50864.2020.00034},
+	eprint = {2004.05131},
+	isbn = {978-1-7281-9891-0},
+	keywords = {mobile robots,robot kinematics,skid-steering vehicles,winter},
+	month = {may},
+	pages = {198--205},
+	publisher = {IEEE},
+	title = {{Evaluation of Skid-Steering Kinematic Models for Subarctic Environments}},
+	url = {https://ieeexplore.ieee.org/document/9108696/},
+	year = {2020}
+}
+
+% dynamic
+
+@inproceedings{Yu2009,
+	author = {Yu, Wei and Chuy, Oscar and Collins, Emmanuel G. and Hollis, Patrick},
+	booktitle = {2009 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+	doi = {10.1109/IROS.2009.5354381},
+	isbn = {978-1-4244-3803-7},
+	month = {oct},
+	pages = {4212--4219},
+	publisher = {IEEE},
+	title = {{Dynamic modeling of a skid-steered wheeled vehicle with experimental verification}},
+	url = {http://ieeexplore.ieee.org/document/5354381/},
+	year = {2009}
+}
+
+
+@article{Seegmiller2016,
+	author = {Seegmiller, Neal and Kelly, Alonzo},
+	doi = {10.1109/TRO.2016.2546310},
+	issn = {1552-3098},
+	journal = {IEEE Transactions on Robotics},
+	keywords = {Dynamics,kinematics,model identification,wheel slip,wheel-terrain interaction,wheeled mobile robots},
+	month = {jun},
+	number = {3},
+	pages = {614--625},
+	publisher = {IEEE},
+	title = {{High-Fidelity Yet Fast Dynamic Models of Wheeled Mobile Robots}},
+	url = {http://ieeexplore.ieee.org/document/7471489/},
+	volume = {32},
+	year = {2016}
+}
+
+@article{Yang2022,
+	author = {Yang, Huaiguang and Ding, Liang and Gao, Haibo and Wang, Zhengyin and Lan, Qingning and Liu, Guangjun and Liu, Zhen and Li, Weihua and Deng, Zongquan},
+	doi = {10.1109/TRO.2022.3160018},
+	issn = {1552-3098},
+	journal = {IEEE Transactions on Robotics},
+	keywords = {Analytical models,Dynamics,Mars,Mathematical models,Soil,Space vehicles,Vehicle dynamics,Wheels,planetary rovers,terrain property mapping,wheel-terrain interaction model},
+	month = {oct},
+	number = {5},
+	pages = {3238--3258},
+	publisher = {IEEE},
+	title = {{High-Fidelity Dynamic Modeling and Simulation of Planetary Rovers Using Single-Input-Multi-Output Joints With Terrain Property Mapping}},
+	url = {https://ieeexplore.ieee.org/document/9763557/},
+	volume = {38},
+	year = {2022}
+}
+
+% quasi-dynamic
+
+@inproceedings{Seegmiller2014,
+	author = {Seegmiller, Neal and Kelly, Alonzo},
+	booktitle = {Robotics: Science and Systems X},
+	doi = {10.15607/RSS.2014.X.020},
+	isbn = {9780992374709},
+	month = {jul},
+	publisher = {Robotics: Science and Systems Foundation},
+	title = {{Enhanced 3D Kinematic Modeling of Wheeled Mobile Robots}},
+	url = {http://www.roboticsproceedings.org/rss10/p20.pdf},
+	year = {2014}
+}
+
+@article{Ostafew2016,
+	author = {Ostafew, Chris J. and Schoellig, Angela P. and Barfoot, Timothy D.},
+	doi = {10.1177/0278364916645661},
+	file = {:home/dominic/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Ostafew, Schoellig, Barfoot - 2016 - Robust Constrained Learning-based NMPC enabling reliable mobile robot path tracking.pdf:pdf},
+	issn = {0278-3649},
+	journal = {The International Journal of Robotics Research},
+	keywords = {Gaussian process,Model predictive control,robust control},
+	month = {nov},
+	number = {13},
+	pages = {1547--1563},
+	publisher = {SAGE Publications Inc.},
+	title = {{Robust Constrained Learning-based NMPC enabling reliable mobile robot path tracking}},
+	url = {http://journals.sagepub.com/doi/10.1177/0278364916645661},
+	volume = {35},
+	year = {2016}
+}
+
+@inproceedings{Rabiee2019,
+	author = {Rabiee, Sadegh and Biswas, Joydeep},
+	booktitle = {2019 International Conference on Robotics and Automation (ICRA)},
+	doi = {10.1109/ICRA.2019.8794216},
+	isbn = {978-1-5386-6027-0},
+	issn = {10504729},
+	keywords = {Contact Modeling,Kinematics,Wheeled Robots},
+	month = {may},
+	pages = {8563--8569},
+	publisher = {IEEE},
+	title = {{A Friction-Based Kinematic Model for Skid-Steer Wheeled Mobile Robots}},
+	url = {https://ieeexplore.ieee.org/document/8794216/},
+	volume = {2019-May},
+	year = {2019}
+}
+
+@article{Takemura2021,
+	author = {Takemura, Reiya and Ishigami, Genya},
+	doi = {10.1109/IROS51168.2021.9635891},
+	isbn = {9781665417143},
+	issn = {21530866},
+	journal = {IEEE International Conference on Intelligent Robots and Systems},
+	pages = {8411--8417},
+	publisher = {IEEE},
+	title = {{Traversability-based Trajectory Planning with Quasi-Dynamic Vehicle Model in Loose Soil}},
+	year = {2021}
+}
+
+@article{Seegmiller2013,
+	author = {Seegmiller, Neal and Rogers-Marcovitz, Forrest and Miller, Greg and Kelly, Alonzo},
+	doi = {10.1177/0278364913488635},
+	issn = {0278-3649},
+	journal = {The International Journal of Robotics Research},
+	keywords = {calibration,model identification,odometry,stochastic process,wheeled mobile robots},
+	month = {jul},
+	number = {8},
+	pages = {912--931},
+	title = {{Vehicle model identification by integrated prediction error minimization}},
+	url = {http://journals.sagepub.com/doi/10.1177/0278364913488635},
+	volume = {32},
+	year = {2013}
+}
+
+
+% Data-driven
+
+@article{Williams2018,
+	author = {Williams, Grady and Drews, Paul and Goldfain, Brian and Rehg, James M. and Theodorou, Evangelos A.},
+	doi = {10.1109/TRO.2018.2865891},
+	issn = {1552-3098},
+	journal = {IEEE Transactions on Robotics},
+	keywords = {Adaptive Systems,Autonomous Vehicles,Control Architectures and Programming,Learning,Motion Control,Stochastic Optimal Control},
+	month = {dec},
+	number = {6},
+	pages = {1603--1622},
+	title = {{Information-Theoretic Model Predictive Control: Theory and Applications to Autonomous Driving}},
+	url = {https://ieeexplore.ieee.org/document/8558663/},
+	volume = {34},
+	year = {2018}
+}
+
+@inproceedings{Nagariya2020,
+	author = {Nagariya, Akhil and Saripalli, Srikanth},
+	booktitle = {2020 IEEE Intelligent Vehicles Symposium (IV)},
+	doi = {10.1109/IV47402.2020.9304851},
+	isbn = {978-1-7281-6673-5},
+	month = {oct},
+	number = {Iv},
+	pages = {1740--1745},
+	publisher = {IEEE},
+	title = {{An Iterative LQR Controller for Off-Road and On-Road Vehicles using a Neural Network Dynamics Model}},
+	url = {https://ieeexplore.ieee.org/document/9304851/},
+	year = {2020}
+}
+
+@inproceedings{Tremblay2021,
+	archivePrefix = {arXiv},
+	arxivId = {2011.11751},
+	author = {Tremblay, Jean-Francois and Manderson, Travis and Noca, Aurelio and Dudek, Gregory and Meger, David},
+	booktitle = {2021 IEEE International Conference on Robotics and Automation (ICRA)},
+	doi = {10.1109/ICRA48506.2021.9561910},
+	eprint = {2011.11751},
+	file = {::},
+	isbn = {978-1-7281-9077-8},
+	issn = {10504729},
+	month = {may},
+	number = {Icra},
+	pages = {1796--1802},
+	publisher = {IEEE},
+	title = {{Multimodal dynamics modeling for off-road autonomous vehicles}},
+	url = {https://ieeexplore.ieee.org/document/9561910/},
+	year = {2021}
+}
+
+% Datasets
+
+@inproceedings{Triest2022,
+	archivePrefix = {arXiv},
+	arxivId = {2205.01791},
+	author = {Triest, Samuel and Sivaprakasam, Matthew and Wang, Sean J. and Wang, Wenshan and Johnson, Aaron M and Scherer, Sebastian},
+	booktitle = {2022 International Conference on Robotics and Automation (ICRA)},
+	doi = {10.1109/ICRA46639.2022.9811648},
+	eprint = {2205.01791},
+	file = {::},
+	isbn = {978-1-7281-9681-7},
+	month = {may},
+	pages = {2546--2552},
+	publisher = {IEEE},
+	title = {{TartanDrive: A Large-Scale Dataset for Learning Off-Road Dynamics Models}},
+	url = {http://arxiv.org/abs/2205.01791 https://ieeexplore.ieee.org/document/9811648/},
+	year = {2022}
+}
+
+
