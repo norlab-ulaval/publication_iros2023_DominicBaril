@@ -8,6 +8,14 @@
 	\item TODO : Discuss kinematic, quasi-dynamic, dynamic and data-driven
 \end{itemize}
 
+The computationally most simple models that have been proposed fall into the kinematic category.
+Such models make use of a Jacobian matrix to compute the resulting robot body-frame velocities resulting from inputs.
+\citet{Anousaki2004} were the first to suggest to use empirical data to tune all coefficients of the Jacobian matrix, allowing to take wheel-terrain interactions into the motion model.
+The original goal of this work is to provide a dead-reckoning motion prediction solution for \ac{SLAM} frameworks. 
+In this work, the model was validated on a \ac{SSMR} on a human-driven trajectory of under \SI{50}{\meter}.
+\citet{Mandow2007} later proposed the \ICRBASED model, however this time by modifying the \ac{IDD} model to take wheel slip into account. 
+
+
 Kinematic models
 \citep{Anousaki2004}
 \citep{Mandow2007}
