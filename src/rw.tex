@@ -21,23 +21,33 @@ The original goal of this work is to provide a dead-reckoning motion prediction 
 In this work, the model was validated on a \ac{SSMR} on a human-driven trajectory of under \SI{50}{\meter}.
 More recently, we have proposed an experimental evaluation of kinematic motion models for \acp{SSMR} operating on asphalt and snow terrains~\citep{Baril2020}. 
 In this work, we show that kinematic models should be calibrated based on the desired prediction window and operating terrain. 
-%% TODO: Find simple kinematic model for Ackerman vehicles?
+While kinematic models offer simplicity, they are often limited in prediction accuracy~\citep{Seegmiller2016}. 
+% TODO: Find simple kinematic model for Ackerman vehicles?
 
 % Dynamic
-While accounting for wheel slip
+Pushing modeling richness further, full dynamic models have been explored to allow to model traction force between \ac{UGV} wheels and soil. 
+\citet{Yu2009} have proposed a dynamic model for a \ac{SSMR} in general planar (2D) and a distinct model for linear 3D motion. 
+This model allows to account for rolling resistance, coefficient of friction, shear deformation modulus and gravity when predicting \ac{UGV} motion.
+To train and evaluate this model, the authors have commanded a \ac{SSMR} to conduct constant circular motions.
+\citet{Seegmiller2016} later proposed a unified notation allowing to represent and model \acp{UGV} as multi-body dynamic systems.
+Such models allow the user to specify suspension, actuation and wheel traction models that govern the model's dynamic equations. 
+Their model evaluation is conducted on human-generated trajectories on asphalt, dirt and grass, using \ac{RTK}-\ac{GNSS} and an \ac{IMU} to generate the ground-truth.
+\citet{Yang2022} later extended this model formulation to allow modeling single-input-multi-output joints, adapting the model to a Mars rover.
+In this work, a digital elevation map is used with terrain properties is used to increase motion prediction accuracy.
+These models have been trained and evaluated for multiple human manoeuvres on a simulated terrain, forcing high traction variations. 
+While proving to be more accurate, dynamic models are computationally complex, making it difficult to predict vehicle motion fast enough for modern \ac{MPC} approaches~\citep{Williams2018}. % TODO: find a better citation for this
+Additionally, such models require extensive information on the platform used~\citet{Yang2022}, which is typically given for extra planetary rovers but hard to find for commercial platforms.
 
+% Quasi-dynamic
+Aiming to find an optimal trade-off between full kinematic and dynamic models, multiple approaches have been proposed to allow dynamics-aware modeling without requiring to solve complete differential equations.
+We will refer to such models as Quasi-dynamic.
+\citet{Seegmiller2014} have proposed to account for wheel slip by subtracting slip velocity to the predicted body velocity of a slip-less model, such as the \ac{IDD} or bicycle model.
+In this model, empirically-tuned linear coefficients allow to compute slip velocity from slip-less velocity based.
+These coefficients are based on physical quantities that the authors have found to affect slip velocities.
+The authors show that under near steady-state conditions of normal operation, this model is nearly as accurate as a full dynamic model, while requiring significantly less computation time and physical information on the given platform~\citep{Seegmiller2014}.
+The data used to train and validate this model is based on the same human-generated trajectories as in~\citep{Seegmiller2016}.
+Similarly,~\citep{Ostafew2016} suggested to model the slip velocity as a \ac{GP}.
 
-
-Kinematic models
-\citep{Anousaki2004}
-\citep{Mandow2007}
-\citep{Wang2015}
-\citep{Baril2020}
-
-Dynamic models
-\citep{Yu2009}
-\citep{Seegmiller2016}
-\citep{Yang2022}
 
 Quasi-dynamic models
 \citep{Seegmiller2014}
