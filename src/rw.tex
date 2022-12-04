@@ -8,12 +8,24 @@
 	\item TODO : Discuss kinematic, quasi-dynamic, dynamic and data-driven
 \end{itemize}
 
-The computationally most simple models that have been proposed fall into the kinematic category.
-Such models make use of a Jacobian matrix to compute the resulting robot body-frame velocities resulting from inputs.
-\citet{Anousaki2004} were the first to suggest to use empirical data to tune all coefficients of the Jacobian matrix, allowing to take wheel-terrain interactions into the motion model.
+% Kinematic
+The most commonly used motion models for \acp{UGV} are purely kinematic models.
+Such models have the advantage that they are computationally simple and are relatively straightforward to train.
+Since ideal models make the assumption that the \ac{UGV} operates in pure rolling and no slippage conditions, such models tend to have high motion prediction error.
+For the case of \acp{SSMR}, which inherently require high wheel slippage and skidding to steer, \citet{Mandow2007} proposed the the \ICRBASED model, an extension of the \ac{IDD} model.
+This model assumes that each robot wheel has a distinct \ac{ICR} due to slippage and that these remain constant for a given terrain. 
+The authors have driven human-generated trajectories of about \SI{30}{\meter} and used \ac{RTK}-\ac{GNSS} to generate ground-truth to empirically fit model parameters.
+\citet{Wang2015} later extended the \ICRBASED model, suggesting that wheel \ac{ICR} values based on the \ac{SSMR}'s \ac{ROC}. 
+Alternatively, \citet{Anousaki2004} proposed to use empirical data to tune all coefficients of the Jacobian matrix, allowing to take wheel-terrain interactions into the motion model.
 The original goal of this work is to provide a dead-reckoning motion prediction solution for \ac{SLAM} frameworks. 
 In this work, the model was validated on a \ac{SSMR} on a human-driven trajectory of under \SI{50}{\meter}.
-\citet{Mandow2007} later proposed the \ICRBASED model, however this time by modifying the \ac{IDD} model to take wheel slip into account. 
+More recently, we have proposed an experimental evaluation of kinematic motion models for \acp{SSMR} operating on asphalt and snow terrains~\citep{Baril2020}. 
+In this work, we show that kinematic models should be calibrated based on the desired prediction window and operating terrain. 
+%% TODO: Find simple kinematic model for Ackerman vehicles?
+
+% Dynamic
+While accounting for wheel slip
+
 
 
 Kinematic models
